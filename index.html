@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+	<link rel="stylesheet" href="css/theme/niji.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section class="title" section data-background-image="css/theme/image/sky.png"
+			data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px">
+			<h1 class="r-fit-text">DEVOPS</h1>
+			<h1 class="r-fit-text">15 min pour démystifier</h1>
+		</section>
+		<section data-background-image="css/theme/image/skywire.png"
+		data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px">
+		<h2>Qu'est ce que DevOps pour vous ?</h2>
+		<div class="imageblock" style="">
+			<img src="img/question.png" alt="?" width="400"/>
+		</div>
+	</section>
+	<section id="constat">
+		<h2>Constat</h2>
+		<p align=center>1 entreprise = n silos (achats, direction métier, développeurs, exploitants...) = n objectifs</p>
+		<p align=center><img src="img/WallOfConfusion.jpg" alt="wall" width = 300 /></p>
+		<small>Les développeurs veulent changer le système, tout le temps</small>
+		<p class="fragment grow">
+			Mais
+		</p>
+		<p class="fragment fade-in">
+			<small>Les opérateurs veulent conserver un système stable (le moins de changement possible)</small>
+		</p>
+		<p class="fragment fade-in">
+			<small>Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests (le moins de changement possible)</small>
+			...
+		</p>
+	</section>
+	<section id="wall_of_confusion">
+		<h2>Conséquence</h2>
+		<p>L'équipe de développement livre plus souvent un meilleur produit, à des opérateurs qui n'ont pas le même objectif.
+			C'est un goulot d'étranglement de la performance et finalement l'entreprise est pénalisée.</p>
+			<p><img src="img/fasterstronger.png" alt="goals" width="500" /></p>
+		</section>
+		<section>
+			<section>
+				<h2>Retour aux fondements : l'<strong>Agilité</strong>, c'est quoi ?</h2>
+				<div class="paragraph">
+					<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
+				</div>
+				<div class="imageblock" style="">
+					<img src="img/manifesto.png" alt="manifesto" width="600" />
+				</div>
+			</section>
+			<section>
+				<h2>Mettons de coté les buzzwords</h2>
+				<div class="imageblock" style="">
+					<img src="img/buzzwords.png" alt="buzzwords" width="400" />
+				</div>
+				<div><strong>L'Agilité est une approche</strong></div>
+				<div>
+					On est juste plus ou moins Agile par rapport à une autre référence.
+					Ex: "La dernière fois le client était présent au daily"
+				</div>
+			</section>
+			<section>
+				<h2>Mais heu les buzzwords?</h2>
+				<figure>
+					<img src="img/matConnaissancePerf.jpg" alt="buzzwords" width="300" />
+					<figcaption>Matrice Connaissance / Performance comme modèle de maturité (SOAT livre blanc Agile)</figcaption>
+				</figure>
+				<medium>
+					<p>Auto-organisation instinctive des équipes projet</p>
+					<p>Observation de ces ajustements &rarr; méthodes telles <strong>Scrum</strong> ou <strong>XP</strong>.</p>
+					<p>Feedbacks fréquents &rarr; des <strong>sprints</strong></p>
+					<p>Communication sans process &rarr; <strong>daily stand-up</strong> !</p>
+					<p>Prioriser + facilement &rarr; <strong>une backlog de User Stories</strong></p>	etc.
+				</medium>
+			</section>
+
+		</section>
+		<section>
+			<section id="devops_origine">
+				<h2>La naissance d'une tendance</h2>
+				<div class="ulist">
+					<ul>
+						<li><p>Mouvement <strong>Agile</strong></p>
+							<ol>
+								<li>Scrum en 1995</li>
+								<li>Extreme Programming en 1999</li>
+								<li>Manifeste Agile en 2001</li>
+							</ol>
+						</li>
+						<li><strong>Lean</strong> manufacturing chez Toyota 1900-1993</p></li>
+					</ul>
+					<p>Agile + Lean = <strong>Lean Software Development (2003)</strong></p></li>
+					<p>Puis <strong>DevOps</strong> (2009)</strong> et <strong>Continuous Delivery</strong> (2010).</p>
+				</div>
+			</section>
+
+			<section>
+				<h2>DEVOPS : une définition</h2>
+				<blockquote>
+					"DevOps est la pratique selon laquelle les ingénieurs d'exploitation et de développement
+					participent ensemble à l'ensemble du cycle de vie des services, de la conception au soutien
+					de la production en passant par le processus de développement.
+					DevOps se caractérise également par le fait que le personnel d'exploitation
+					utilise beaucoup des mêmes techniques que les développeurs pour leur travail sur les systèmes.”
+				</blockquote>
+				<medium>Ernest Mueller, The Agile Admin</medium>
+
+			</section>
+			<section id="les définitions">
+				<h3>CI/CD</h3>
+				<ul>
+					<li>CI (intégration continue) : assurer une livraison continue de code </li>
+					<li>CD (déploiement continu) : CI + assurer un déploiement continu de fonctionnalités</li>
+					<li>continuous delivery : CI+CD</li>
+				</ul>
+				<p><img src="img/devops.png" alt="devops" width="600" /></p>
+			</section>
+
+			<!-- <section>
+			<h2>DEVOPS : d'autres définitions</h2>
+			"Cesser de dépendre de l'inspection de masse pour obtenir la qualité. Améliorer le processus et intégrer la qualité dans le produit dès le départ."
+			W. Edwards Deming
+
+			"Ce n'est pas parce que nous utilisons des conteneurs que nous "faisons du DevOps"
+			Jérôme Petazzoni, Developer Advocate @Docker
+		</section> -->
+		<section>
+			<h2>Ca change quoi?</h2>
+			<p><img src="img/teams.png" alt="teams" width="900" /></p>
+		</section>
+	</section>
+	<section>
+		<section id="les concepts">
+			<h2>Les concepts</h2>
+		</section>
+		<section id="container">
+			<h2>La containerisation</h>
+				Build once deploy everywhere
+			</section>
+
+			<section id="pipeline">
+				<h2>Le pipeline de déploiement</h>
+					...
+				</section>
+				<section>
+					<h2>Test en continu</h2>
+					Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés. -> antipattern
+					Le test en continu augmente la part de tests automatisés.
+					<p><img src="img/pyramide.png" alt="tests" width="600" /></p>
+				</section>
+				<section>
+					<h2>Test Agile</h2>
+					Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.
+					Le test Agile considère les tests comme la spécification du produit, avant son développement.
+					- tester pour spécifier, spec par l'exemple
+					<p><img src="img/atdd.png" alt="atdd" width="600" /></p>
+				</section>
+				<section>
+					<h2>Infra as Code</h2>
+					Considérer que l'architecture fait partie du source control, la manipuler comme une partie du projet.
+					- Augmente la cohérence entre architecture et application,
+					- Instanciation idempotente donc fiable, et automatique de l'infrastructure à partir de scripts. #terraform #forge
+				</section>
+				<section><h2>Everything as Code</h2></section>
+				<section><h2>Containerisation</h2></section>
+				<section><h2>Feature Flipping</h2></section>
+
+				<!-- <section>
+				<h2>Keep C.A.L.M.S. and <strong>DEVOPS</strong> !</h2>
+				DEVOPS n'est pas une formule magique, mais le prolongement de l'Agilité.
+				<p><img src="img/CALMS.png" alt="CALMS" width="600" /></p>
+			</section> -->
+			<section>
+				Alors démarre le grand voyage DEVOPS.
+
+				<p><img src="img/devops_matrix.png" alt="matrix" width="900" /></p>
+			</section>
+			<section>
+				<h2>Observations</h2>
+				<ul>
+					<li>On ne peut pas partager une vision produit (CULTURE) sans définir et suivre les bons indicateurs (REPORTING)</li>
+					<li>On ne peut pas deployer en continu (DEPLOY) sans une stratégie de tests adaptée (TEST), ni sans (BUILD) industrialisé.</li>
+					<li>On ne peut pas attendre de l'UX qu'elle séduise le client final si leurs feedbacks ne sont pas fréquents (CULTURE, DEPLOY, REPORTING)</li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>Conclusion</h2>
+			</section>
+			<section>
+				Exprimer ses intentions et contraintes
+				- Faire preuve d'empathie,
+				- Partager ses contraintes,
+				- Accepter celles des autres.
+				Ex : l'équipe de dev veut changer le système tous les matins, pendant que les ops veulent la stabilité de l'infra, donc le moins de changements possible.
+				<p><img src="img/injury.png" alt="injury" width="600" /></p>
+			</section>
+			<section>
+				<h2>Questions?</h2>
+				<p><img src="img/questions.jpg" alt="questions" width="600" /></p>
+			</section>
+			<section id="roti_return_on_time_invested">
+				<h2>ROTI : Return On Time Invested</h2>
+				<div class="ulist">
+					<ul>
+						<li>
+							<p>FUN vs VALUE</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</section>
+	</div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+// More info about initialization & config:
+// - https://revealjs.com/initialization/
+// - https://revealjs.com/config/
+Reveal.initialize({
+	hash: true,
+	// Display controls in the bottom right corner
+	controls: true,
+	// Display the page number of the current slide
+	slideNumber: true,
+	// Push each slide change to the browser history
+	history: false,
+	// Enable keyboard shortcuts for navigation
+	keyboard: true,
+	// Enable the slide overview mode
+	overview: true,
+	// Vertical centering of slides
+	center: true,
+	// Enables touch navigation on devices with touch input
+	touch: true,
+	// Loop the presentation
+	loop: false,
+	// Change the presentation direction to be RTL
+	rtl: false,
+	// Turns fragments on and off globally
+	fragments: true,
+	// Flags if the presentation is running in an embedded mode,
+	// i.e. contained within a limited portion of the screen
+	embedded: false,
+	// Number of milliseconds between automatically proceeding to the
+	// next slide, disabled when set to 0, this value can be overwritten
+	// by using a data-autoslide attribute on your slides
+	autoSlide: 0,
+	// Stop auto-sliding after user input
+	autoSlideStoppable: true,
+	// Enable slide navigation via mouse wheel
+	mouseWheel: true,
+	// Hides the address bar on mobile devices
+	hideAddressBar: true,
+	// Opens links in an iframe preview overlay
+	previewLinks: false,
+	// Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+	// NOTE setting the theme in the config no longer works in reveal.js 3.x
+	// theme: Reveal.getQueryHash().theme || 'niji',
+	// Transition style (e.g., none, fade, slide, convex, concave, zoom)
+	transition: 'slide',
+	// Transition speed (e.g., default, fast, slow)
+	transitionSpeed: 'default',
+	// Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+	backgroundTransition: 'fade',
+	// Number of slides away from the current that are visible
+	viewDistance: 3,
+	// Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+	// parallaxBackgroundImage: 'css/theme/image/fondnoir.jpg',
+	parallaxBackgroundImage: 'css/theme/image/fondNiji.png',
+	// Parallax background size in CSS syntax (e.g., "2100px 900px")
+	parallaxBackgroundSize: 'cover',
+	parallaxBackgroundHorizontal: 200,
+	parallaxBackgroundVertical: 200,
+	// Learn about plugins: https://revealjs.com/plugins/
+	plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+});
+</script>
+</body>
+</html>
