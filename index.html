@@ -34,22 +34,23 @@
 			<section id="constat">
 				<h2>Constat</h2>
 				<small>1 entreprise = n silos (achats, direction métier, développeurs, exploitants...) = n objectifs</small>
-				<p align=center><img src="img/theOffice.png" alt="wall" width = 500 /></p>
+				<img src="img/theOffice.png" alt="wall" width = 500 />
 				<small>Les développeurs veulent changer le système, tout le temps
-					<p class="fragment grow highlight-red">Mais</p>
-					<p class="fragment fade-in">
-						Les opérateurs veulent conserver un système stable (le moins de changement possible)
-					</p>
-					<p class="fragment fade-in">
-						Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests (le moins de changement possible)</small>
-						...
-					</p>
+					<section data-autoslide="5000">
+						<p class="fragment grow highlight-red">Mais</p>
+						<p class="fragment fade-in">Les opérateurs veulent conserver un système stable</p>
+						<p class="fragment fade-in">Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests</p>
+						<p class="fragment fade-in">Soit le moins de changement possible!</p>
+						<p class="fragment fade-in">...</p>
+					</section>
+				</small>
+
 				</section>
 
 				<section id="wall_of_confusion">
 					<h2>Conséquence</h2>
 					<p>
-						L'organisation n'est pas alignée sur l'objectif de livrer <a class="fragment highlight-red">plus souvent, plus vite, et moins cher.</a>
+						L'organisation n'est pas alignée sur l'objectif de livrer un produit <a class="fragment highlight-red">plus souvent, plus vite, et moins cher.</a>
 						C'est un goulot d'étranglement de la performance globale et finalement l'entreprise est pénalisée.
 					</p>
 					<p>
@@ -78,7 +79,7 @@
 
 					<section>
 						<h2>Mettons de coté les buzzwords</h2>
-						<div><strong>L'Agilité est une approche</strong></div>
+						<div><strong>L'Agilité est une culture</strong></div>
 						<div class="imageblock" style="">
 							<img src="img/buzzwords.png" alt="buzzwords" width="400" />
 						</div>
@@ -86,7 +87,8 @@
 							On est juste plus ou moins Agile par rapport à une autre référence.
 							Ex: "Désormais on livre chaque semaine"
 						</div>
-						<small>Oui mais d'où je pars et jusqu'où je peux aller ?</small>
+						<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
+
 					</section>
 
 					<section data-transition="zoom">
@@ -122,9 +124,8 @@
 							Dos au mur, les équipes ont la capacité à sortir du chaos pour
 							devenir efficaces et tenir leurs engagements. C’est le sursaut agile
 						</medium>
-
 						<div class="fragment fade-in">
-							<div class="imageblock" style=""><img src="img/sleeping.gif" alt="buzzwords" width="300" /></div>
+							<div class="imageblock" style=""><img src="img/sleeping.gif" alt="buzzwords" width="200" /></div>
 							<div><strong>&rarr; Efficace mais pas efficient</strong></div>
 							<div><strong>&rarr; Et si on avait travaillé comme ça depuis le début ?</strong></div>
 						</div>
@@ -161,10 +162,32 @@
 						</blockquote>
 						<medium>Ernest Mueller, The Agile Admin</medium>
 					</section>
-					<section>
-						DEVOPS comme extension de l'Agilité.
 
-						<p><img src="img/devops_matrix.png" alt="matrix" width="900" /></p>
+					<section>
+						<h2>Quels moyens?</h2>
+						<p><img src="img/teams.png" alt="teams" width="900" /></p>
+						<div>Et ensuite ?</div>
+					</section>
+
+					<section section data-transition="zoom-out">
+						<h3>DEVOPS comme extension de l'Agilité.</h3>
+						<img src="img/devops_matrix.png" alt="matrix" width="700" />
+						<p>On a vu qu'on était plus ou moins Agile</p>
+						<o>La maturité DevOps peut aussi se mesurer par des changements sur le build d'une part (dév), l'architecture et le déploiement d'autre part.</p>
+					</section>
+
+					<section section data-transition="zoom-in">
+						<h2>Oui, mais</h2>
+						<medium>
+							<ul>
+								<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des anomalies</li>
+								<li>livrer + vite sans vision produit et UX = livrer + vite le mauvais produit</li>
+								<li>livrer - cher pour dépenser + en gestion documentaire = revient + cher</li>
+							</ul>
+						</medium>
+						<p>DevOps a donc rendu des organisations efficaces, puis avec le temps s'est étendu à toute une série d'autres concepts liés les uns aux autres.
+						En mettant en place ces concepts, l'organisation devient efficiente.</p>
+
 					</section>
 					<!-- <section>
 						<h2>Observations</h2>
@@ -174,21 +197,6 @@
 							<li>On ne peut pas attendre de l'UX qu'elle séduise le client final si leurs feedbacks ne sont pas fréquents (CULTURE, DEPLOY, REPORTING)</li>
 						</ul>
 					</section> -->
-					<section>
-						<h2>Ca change quoi?</h2>
-						<p><img src="img/teams.png" alt="teams" width="900" /></p>
-						<div>Et ensuite ?</div>
-					</section>
-					
-					<section id="les définitions">
-						<h3>CI/CD</h3>
-						<ul>
-							<li>CI (intégration continue) : assurer une livraison continue de code </li>
-							<li>CD (déploiement continu) : CI + assurer un déploiement continu de fonctionnalités</li>
-							<li>continuous delivery : CI+CD</li>
-						</ul>
-						<p><img src="img/devops.png" alt="devops" width="600" /></p>
-					</section>
 
 					<!-- <section>
 					<h2>DEVOPS : d'autres définitions</h2>
@@ -200,10 +208,23 @@
 				</section> -->
 
 			</section>
+
 			<section>
+
 				<section id="les concepts">
 					<h2>Les concepts</h2>
 				</section>
+
+				<section id="les définitions">
+					<h3>CI/CD</h3>
+					<ul>
+						<li>CI (intégration continue) : assurer une livraison continue de code </li>
+						<li>CD (déploiement continu) : CI + assurer un déploiement continu de fonctionnalités</li>
+						<li>continuous delivery : CI+CD</li>
+					</ul>
+					<p><img src="img/devops.png" alt="devops" width="600" /></p>
+				</section>
+
 				<section id="container">
 					<h2>La containerisation</h>
 						Build once deploy everywhere
@@ -212,29 +233,33 @@
 					<section id="pipeline">
 						<h2>Le pipeline de déploiement</h>
 							...
-						</section>
-						<section>
-							<h2>Test en continu</h2>
-							Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés. -> antipattern
-							Le test en continu augmente la part de tests automatisés.
-							<p><img src="img/pyramide.png" alt="tests" width="600" /></p>
-						</section>
-						<section>
-							<h2>Test Agile</h2>
-							Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.
-							Le test Agile considère les tests comme la spécification du produit, avant son développement.
-							- tester pour spécifier, spec par l'exemple
-							<p><img src="img/atdd.png" alt="atdd" width="600" /></p>
-						</section>
-						<section>
-							<h2>Infra as Code</h2>
-							Considérer que l'architecture fait partie du source control, la manipuler comme une partie du projet.
-							- Augmente la cohérence entre architecture et application,
-							- Instanciation idempotente donc fiable, et automatique de l'infrastructure à partir de scripts. #terraform #forge
-						</section>
-						<section><h2>Everything as Code</h2></section>
-						<section><h2>Containerisation</h2></section>
-						<section><h2>Feature Flipping</h2></section>
+					</section>
+
+					<section>
+						<h2>Infra as Code</h2>
+						Considérer que l'architecture fait partie du source control, la manipuler comme une partie du projet.
+						- Augmente la cohérence entre architecture et application,
+						- Instanciation idempotente donc fiable, et automatique de l'infrastructure à partir de scripts. #terraform #forge
+					</section>
+
+					<section><h2>Everything as Code</h2></section>
+
+					<section><h2>Feature Flipping</h2></section>
+
+					<section>
+						<h2>Test en continu</h2>
+						Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés. -> antipattern
+						Le test en continu augmente la part de tests automatisés.
+						<p><img src="img/pyramide.png" alt="tests" width="600" /></p>
+					</section>
+
+					<section>
+						<h2>Test Agile</h2>
+						Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.
+						Le test Agile considère les tests comme la spécification du produit, avant son développement.
+						- tester pour spécifier, spec par l'exemple
+						<p><img src="img/atdd.png" alt="atdd" width="600" /></p>
+					</section>
 
 						<!-- <section>
 						<h2>Keep C.A.L.M.S. and <strong>DEVOPS</strong> !</h2>
@@ -244,8 +269,17 @@
 
 				</section>
 				<section>
+					<section data-autoslide="2000">
+
+						<p class="fragment">Conclusion</p>
+					</section>
 					<section>
-						<h2>Conclusion</h2>
+						<h2>Devops va t il mourir ?</h2>
+						<h3>Spoiler : non.</h>
+						<p><img src="img/trends.jpg" alt="atdd" width="1000" /></p>
+						<p>
+							<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script>
+							<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"devops","geo":"","time":"2004-01-01 2022-11-11"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=devops","guestPath":"https://trends.google.fr:443/trends/embed/"}); </script></p>
 					</section>
 					<section>
 						Exprimer ses intentions et contraintes
