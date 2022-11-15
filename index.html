@@ -17,8 +17,9 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+
 			<section class="title" section data-background-image="css/theme/image/sky.png"
-				data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px">
+				data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px" id="titre">
 				<div class="r-stack">
   				<p class="blur"><img src="img/devops_cover2.png" width="800"></p>
 					<h1 class="r-fit-text glow">DEVOPS</h1>
@@ -27,7 +28,7 @@
 			</section>
 
 			<section data-background-image="css/theme/image/skywire.png"
-			data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px">
+			data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px" id="quoi">
 				<h2>Qu'est ce que DevOps pour vous ?</h2>
 				<div class="imageblock" style="">
 					<img src="img/question.png" alt="?" width="400"/>
@@ -39,7 +40,7 @@
 				<small>1 entreprise = n silos (achats, direction métier, développeurs, exploitants...) = n objectifs</small>
 				<img src="img/theOffice.png" alt="wall" width = 500 />
 				<small>Les développeurs veulent changer le système, tout le temps
-					<section data-autoslide="5000">
+					<section data-autoslide="5000" id="wall_of_confusion">
 						<p class="fragment grow highlight-red">Mais</p>
 						<p class="fragment fade-in">Les opérateurs veulent conserver un système stable</p>
 						<p class="fragment fade-in">Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests</p>
@@ -47,194 +48,196 @@
 						<p class="fragment fade-in">...</p>
 					</section>
 				</small>
+			</section>
 
+			<section id="wall_of_confusion">
+				<h2>Conséquence</h2>
+				<p>
+					L'organisation n'est pas alignée sur l'objectif de livrer un produit <a class="fragment highlight-red">plus souvent, plus vite, et moins cher.</a>
+					C'est un goulot d'étranglement de la performance globale et finalement l'entreprise est pénalisée.
+				</p>
+				<p>
+					<img src="img/fasterstronger.jpg" alt="goals" width="300" />
+				</p>
+			</section>
+
+			<section id="comment">
+				<h2>Mais alors...comment faire?</h2>
+				<p>
+					Plus vite, moins cher, plus souvent, mieux, ça me rappelle quelque chose...
+				</p>
+				<img src="img/question.png" alt="?" width="400"/>
+			</section>
+
+			<section id="agilite">
+				<section id="agilte_fondements">
+					<h2>Retour aux fondements : l'<strong>Agilité</strong>, c'est quoi ?</h2>
+					<div class="paragraph">
+						<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
+					</div>
+					<div class="imageblock" style="">
+						<img src="img/manifesto.jpg" alt="manifesto" width="600" />
+					</div>
 				</section>
 
-				<section id="wall_of_confusion">
-					<h2>Conséquence</h2>
-					<p>
-						L'organisation n'est pas alignée sur l'objectif de livrer un produit <a class="fragment highlight-red">plus souvent, plus vite, et moins cher.</a>
-						C'est un goulot d'étranglement de la performance globale et finalement l'entreprise est pénalisée.
-					</p>
-					<p>
-						<img src="img/fasterstronger.jpg" alt="goals" width="300" />
-					</p>
+				<section id="agilite_culture">
+					<h2>Mettons de coté les buzzwords</h2>
+					<div><strong>L'Agilité est une culture</strong></div>
+					<div class="imageblock" style="">
+						<img src="img/buzzwords.jpg" alt="buzzwords" width="400" />
+					</div>
+					<div>
+						On est juste plus ou moins Agile par rapport à une autre référence.
+						Ex: "Désormais on livre chaque semaine"
+					</div>
+					<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
+				<!-- MAintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
+			Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT-->
 				</section>
 
-				<section id="constat">
-					<h2>Mais alors...comment faire?</h2>
-					<p>
-						Plus vite, moins cher, plus souvent, mieux, ça me rappelle quelque chose...
-					</p>
-					<img src="img/question.png" alt="?" width="400"/>
+				<section data-transition="zoom" id="agile_mat_soat">
+					<h2>Le sursaut Agile</h2>
+					<figure>
+						<img src="img/matConnaissancePerf.jpg" alt="buzzwords" width="300" />
+						<figcaption>Matrice Connaissance / Performance comme modèle de maturité (SOAT livre blanc Agile)</figcaption>
+					</figure>
+					<small>
+						<ul>
+							<li>Organisations chaotiques : pas de méthodes, "ça tombe en marche"</li>
+							<li>Organisations théoriques : méthodes riches, processus, standards, top-down</li><!-- ITIL, CMMI, ISO -->
+							<li>Organisation efficaces : ça marche, mais c'est fatigant (startups)</li>
+							<li>Organisation efficiente : ça marche et c'est facile : l'efficacité est maîtrisée</li>
+						</ul>
+					</small>
 				</section>
 
-				<section>
-					<section>
-						<h2>Retour aux fondements : l'<strong>Agilité</strong>, c'est quoi ?</h2>
-						<div class="paragraph">
-							<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
-						</div>
-						<div class="imageblock" style="">
-							<img src="img/manifesto.jpg" alt="manifesto" width="600" />
-						</div>
-					</section>
-
-					<section>
-						<h2>Mettons de coté les buzzwords</h2>
-						<div><strong>L'Agilité est une culture</strong></div>
-						<div class="imageblock" style="">
-							<img src="img/buzzwords.jpg" alt="buzzwords" width="400" />
-						</div>
-						<div>
-							On est juste plus ou moins Agile par rapport à une autre référence.
-							Ex: "Désormais on livre chaque semaine"
-						</div>
-						<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
-					<!-- MAintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
-				Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT-->
-					</section>
-
-					<section data-transition="zoom">
-						<h2>Le sursaut Agile</h2>
-						<figure>
-							<img src="img/matConnaissancePerf.jpg" alt="buzzwords" width="300" />
-							<figcaption>Matrice Connaissance / Performance comme modèle de maturité (SOAT livre blanc Agile)</figcaption>
-						</figure>
-						<small>
+				<section data-transition="zoom" id="agile_sursaut">
+					<h2>Le sursaut Agile</h2>
+					<small>
+						Devenir efficace par l'auto-organisation intuitive à l'échelle d'un projet, sur une durée limitée.
+						En période de stress intense, l'équipe réagit en état d'urgence pour éteindre le feu et tente le tout pour le tout :
+						<p>
 							<ul>
-								<li>Organisations chaotiques : pas de méthodes, "ça tombe en marche"</li>
-								<li>Organisations théoriques : méthodes riches, processus, standards, top-down</li><!-- ITIL, CMMI, ISO -->
-								<li>Organisation efficaces : ça marche, mais c'est fatigant (startups)</li>
-								<li>Organisation efficiente : ça marche et c'est facile : l'efficacité est maîtrisée</li>
+								<li align=left>Taskforce et réunion des compétences, travail ensemble au quotidien</li>
+								<li align=left>oubli des règles faisant obstacle à un fonctionnement fluide</li>
+								<li align=left>MAJ déployées aussi souvent que possible, test, feedback</li>
 							</ul>
-						</small>
-					</section>
-
-					<section data-transition="zoom">
-						<h2>Le sursaut Agile</h2>
-						<small>
-							Devenir efficace par l'auto-organisation intuitive à l'échelle d'un projet, sur une durée limitée.
-							En période de stress intense, l'équipe réagit en état d'urgence pour éteindre le feu et tente le tout pour le tout :
-							<p>
-								<ul>
-									<li align=left>Taskforce et réunion des compétences, travail ensemble au quotidien</li>
-									<li align=left>oubli des règles faisant obstacle à un fonctionnement fluide</li>
-									<li align=left>MAJ déployées aussi souvent que possible, test, feedback</li>
-								</ul>
-							</p>
-						</small>
-						<medium>
-							Dos au mur, les équipes ont la capacité à sortir du chaos pour
-							devenir efficaces et tenir leurs engagements. C’est le sursaut agile
-						</medium>
-						<div class="fragment fade-in">
-							<div class="imageblock" style=""><img src="img/sleeping.gif" alt="buzzwords" width="200" /></div>
-							<div><strong>&rarr; Efficace mais pas efficient</strong></div>
-							<div><strong>&rarr; Et si on avait travaillé comme ça depuis le début ?</strong></div>
-						</div>
-					</section>
+						</p>
+					</small>
+					<medium>
+						Dos au mur, les équipes ont la capacité à sortir du chaos pour
+						devenir efficaces et tenir leurs engagements. C’est le sursaut agile
+					</medium>
+					<div class="fragment fade-in">
+						<div class="imageblock" style=""><img src="img/sleeping.gif" alt="buzzwords" width="200" /></div>
+						<div><strong>&rarr; Efficace mais pas efficient</strong></div>
+						<div><strong>&rarr; Et si on avait travaillé comme ça depuis le début ?</strong></div>
+					</div>
 				</section>
+
+			</section>
 
 <!-- Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes -->
 <!-- SCRUM = Sprints, backlog, PO -->
 <!-- XP = ATDD, DDD, spec par l'ex  -->
 <!-- Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue) -->
-				<section>
-					<section id="devops_origine">
-						<h2>La naissance d'une tendance</h2>
-						<div class="ulist">
-							<ul>
-								<li><p>Mouvement <strong>Agile</strong></p>
-									<ol>
-										<li>Scrum en 1995</li>
-										<li>Extreme Programming en 1999</li>
-										<li>Manifeste Agile en 2001</li>
-									</ol>
-								</li>
-								<li><strong>Lean</strong> manufacturing chez Toyota 1900-1993</p></li>
-							</ul>
-							<p>Agile + Lean = <strong>Lean Software Development (2003)</strong></p></li>
-							<p>Puis <strong>DevOps</strong> (2009)</strong> et <strong>Continuous Delivery</strong> (2010).</p>
-						</div>
-					</section>
+			<section id="devops">
 
-					<section>
-						<h2>DEVOPS : une définition</h2>
-						<blockquote>
-							"DevOps est la pratique selon laquelle les ingénieurs d'exploitation et de développement
-							participent ensemble à l'ensemble du cycle de vie des services, de la conception au soutien
-							de la production en passant par le processus de développement.
-							DevOps se caractérise également par le fait que le personnel d'exploitation
-							utilise beaucoup des mêmes techniques que les développeurs pour leur travail sur les systèmes.”
-						</blockquote>
-						<medium>Ernest Mueller, The Agile Admin</medium>
-					</section>
+				<section id="devops_origine">
+					<h2>La naissance d'une tendance</h2>
+					<div class="ulist">
+						<ul>
+							<li><p>Mouvement <strong>Agile</strong></p>
+								<ol>
+									<li>Scrum en 1995</li>
+									<li>Extreme Programming en 1999</li>
+									<li>Manifeste Agile en 2001</li>
+								</ol>
+							</li>
+							<li><strong>Lean</strong> manufacturing chez Toyota 1900-1993</p></li>
+						</ul>
+						<p>Agile + Lean = <strong>Lean Software Development (2003)</strong></p></li>
+						<p>Puis <strong>DevOps</strong> (2009)</strong> et <strong>Continuous Delivery</strong> (2010).</p>
+					</div>
+				</section>
 
-					<section>
-						<h2>Quels moyens?</h2>
-						<p><img src="img/teams.jpg" alt="teams" width="900" /></p>
-						<div>Et ensuite ?</div>
-					</section>
+				<section id="devops_definition">
+					<h2>DEVOPS : une définition</h2>
+					<blockquote>
+						"DevOps est la pratique selon laquelle les ingénieurs d'exploitation et de développement
+						participent ensemble à l'ensemble du cycle de vie des services, de la conception au soutien
+						de la production en passant par le processus de développement.
+						DevOps se caractérise également par le fait que le personnel d'exploitation
+						utilise beaucoup des mêmes techniques que les développeurs pour leur travail sur les systèmes.”
+					</blockquote>
+					<medium>Ernest Mueller, The Agile Admin</medium>
+				</section>
 
-					<!-- Les choix d'architecture technique qui vont être opérés pour le projet, la façon dont le projet va être construit  -->
-					<!-- Les choix sur la façon de compiler et déployer les fonctionnalités -->
-					<!-- En grandissant ainsi on prétend donc livrer + souvent + vite et - cher -->
-					<section section data-transition="zoom-out">
-						<h3>DEVOPS comme extension de l'Agilité.</h3>
-						<div class="r-stack">
-							<img class="fragment" src="img/devops_matrix1.jpg" alt="matrix" width="600" />
-							<img class="fragment" src="img/devops_matrix2.jpg" alt="matrix" width="600" />
-						</div>
+				<section id="devops_moyens">
+					<h2>Quels moyens?</h2>
+					<p><img src="img/teams.jpg" alt="teams" width="900" /></p>
+					<div>Et ensuite ?</div>
+				</section>
 
-						<p>Comme l'Agilité, la maturité DevOps se mesure par l'application de concepts</p>
-						<p>Si l'on s'en tient à la définition théorique de DevOps, en appliquant des changements sur le build, l'architecture et le déploiement, alors on grandit en maturité.</p>
-					</section>
+				<!-- Les choix d'architecture technique qui vont être opérés pour le projet, la façon dont le projet va être construit  -->
+				<!-- Les choix sur la façon de compiler et déployer les fonctionnalités -->
+				<!-- En grandissant ainsi on prétend donc livrer + souvent + vite et - cher -->
+				<section section data-transition="zoom-out" id="devops_extends_agility">
+					<h3>DEVOPS comme extension de l'Agilité.</h3>
+					<div class="r-stack">
+						<img class="fragment" src="img/devops_matrix1.jpg" alt="matrix" width="600" />
+						<img class="fragment" src="img/devops_matrix2.jpg" alt="matrix" width="600" />
+					</div>
 
-					<!-- idéalement, il faudrait un nouvel axe "écoresp" à cette matrice -->
-					<section section data-transition="zoom-in">
-						<h2>Oui, mais</h2>
-						<small>
-							<ul>
-								<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des bugs</li>
-								<li>livrer + vite sans vision produit ni UX = livrer + vite le mauvais produit</li>
-								<li>livrer - cher pour dépenser + en gestion documentaire = revient + cher</li>
-							</ul>
+					<p>Comme l'Agilité, la maturité DevOps se mesure par l'application de concepts</p>
+					<p>Si l'on s'en tient à la définition théorique de DevOps, en appliquant des changements sur le build, l'architecture et le déploiement, alors on grandit en maturité.</p>
+				</section>
+
+				<!-- idéalement, il faudrait un nouvel axe "écoresp" à cette matrice -->
+				<section section data-transition="zoom-in" id="devops_matrix">
+					<h2>Oui, mais</h2>
+					<small>
+						<ul>
+							<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des bugs</li>
+							<li>livrer + vite sans vision produit ni UX = livrer + vite le mauvais produit</li>
+							<li>livrer - cher pour dépenser + en gestion documentaire = revient + cher</li>
+						</ul>
 						<p>
 							DevOps a donc rendu des organisations efficaces, puis avec le temps s'est étendu à toute une série d'autres concepts liés les uns aux autres.
 							En mettant en place ces concepts, l'organisation devient efficiente.
 						</p>
 					</small>
-					<div><img class="fragment fade-up" src="img/devops_matrix.jpg" alt="matrix" width="600" /></div>
-
-					</section>
-					<!-- <section>
-						<h2>Observations</h2>
-						<ul>
-							<li>On ne peut pas partager une vision produit (CULTURE) sans définir et suivre les bons indicateurs (REPORTING)</li>
-							<li>On ne peut pas deployer en continu (DEPLOY) sans une stratégie de tests adaptée (TEST), ni sans (BUILD) industrialisé.</li>
-							<li>On ne peut pas attendre de l'UX qu'elle séduise le client final si leurs feedbacks ne sont pas fréquents (CULTURE, DEPLOY, REPORTING)</li>
-						</ul>
-					</section> -->
-
-					<!-- <section>
-					<h2>DEVOPS : d'autres définitions</h2>
-					"Cesser de dépendre de l'inspection de masse pour obtenir la qualité. Améliorer le processus et intégrer la qualité dans le produit dès le départ."
-					W. Edwards Deming
-
-					"Ce n'est pas parce que nous utilisons des conteneurs que nous "faisons du DevOps"
-					Jérôme Petazzoni, Developer Advocate @Docker
+					<div>
+						<img class="fragment fade-up" src="img/devops_matrix.jpg" alt="matrix" width="600" />
+					</div>
+				</section>
+				<!-- <section>
+					<h2>Observations</h2>
+					<ul>
+						<li>On ne peut pas partager une vision produit (CULTURE) sans définir et suivre les bons indicateurs (REPORTING)</li>
+						<li>On ne peut pas deployer en continu (DEPLOY) sans une stratégie de tests adaptée (TEST), ni sans (BUILD) industrialisé.</li>
+						<li>On ne peut pas attendre de l'UX qu'elle séduise le client final si leurs feedbacks ne sont pas fréquents (CULTURE, DEPLOY, REPORTING)</li>
+					</ul>
 				</section> -->
+
+				<!-- <section>
+				<h2>DEVOPS : d'autres définitions</h2>
+				"Cesser de dépendre de l'inspection de masse pour obtenir la qualité. Améliorer le processus et intégrer la qualité dans le produit dès le départ."
+				W. Edwards Deming
+
+				"Ce n'est pas parce que nous utilisons des conteneurs que nous "faisons du DevOps"
+				Jérôme Petazzoni, Developer Advocate @Docker
+			</section> -->
 
 			</section>
 
-			<section>
+			<section id="concepts">
 
-				<section id="les concepts">
+				<section id="concepts_titre">
 					<h1>Les concepts</h1>
 				</section>
 
-				<section data-visibility="hidden" id="les définitions">
+				<section data-visibility="hidden" id="définitions">
 					<h3>CI/CD</h3>
 					<ul>
 						<li>CI (intégration continue) : assurer une livraison continue de code </li>
@@ -274,24 +277,24 @@
 				<section id="container">
 					<!-- #Docker #Kubernetes-->
 					<h3>La containerisation</h3>
-						<!-- Les VM émulent l'application, l'OS et les systèmes de fichier.
-						Les containers utilisent l'OS de l'hote (la VM) -->
-						<small>
-							Evolution des machines virtuelles, permettant d'embarquer dans une même image ("paquet") l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
-						</small>
-						<small>
-							<p class="fragment grow"><img class="fragment grow" src="img/containers.jpg" alt="devops" width="400" /></p>
-							<h4>Avantages</h4>
-							<ul>
-								<li>Portabilité : l'application est autonome, déployable et exécutable sur n'importe quelle machine avec un OS et un moteur d'exécution de container. Build once, deploy anywhere.</li>
-								<li>Isolation : chaque container est une application avec son propre cycle de vie et indépendante des autres <red>#microservices</red></li>
-								<li>Orchestration : des outils permettent de créer, déployer, orchestrer les containers automatiquement pour par ex les mettre à l'échelle <red>#kubernetes</red></li>
-							</ul>
-						</small>
+					<!-- Les VM émulent l'application, l'OS et les systèmes de fichier.
+					Les containers utilisent l'OS de l'hote (la VM) -->
+					<small>
+						Evolution des machines virtuelles, permettant d'embarquer dans une même image ("paquet") l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
+					</small>
+					<small>
+						<p class="fragment grow"><img class="fragment grow" src="img/containers.jpg" alt="devops" width="400" /></p>
+						<h4>Avantages</h4>
+						<ul>
+							<li>Portabilité : l'application est autonome, déployable et exécutable sur n'importe quelle machine avec un OS et un moteur d'exécution de container. Build once, deploy anywhere.</li>
+							<li>Isolation : chaque container est une application avec son propre cycle de vie et indépendante des autres <red>#microservices</red></li>
+							<li>Orchestration : des outils permettent de créer, déployer, orchestrer les containers automatiquement pour par ex les mettre à l'échelle <red>#kubernetes</red></li>
+						</ul>
+					</small>
 				</section>
 
 				<!-- Pour aller + loin que l'appli + son environnement d'exécution : l'IAC -->
-				<section>
+				<section id="iac">
 					<h3>Infra as Code</h3>
 					<small>
 						<p>Considérer que l'architecture fait partie du source control, la manipuler comme une partie du code du projet <red>#IAC</red>.</p>
@@ -328,7 +331,7 @@
 					<h3>Everything As Code</h3>
 					<small>
 						<p>Le code de l'infra et des pipelines fait partie du code du projet. La documentation aussi, les tests aussi, la sécurité ainsi que tout ce qui peut être codé.</p>
-						<p>Le support de cette présentation est du code, il fait partie du code d'un projet et pèse TODO Mo.</p>
+						<p>Le support de cette présentation est du code, il fait partie du code d'un projet et pèse 15 Mo.</p>
 					</small>
 					<p><img src="img/eac.jpg" alt="devops" width="500" /></p>
 					<small>
@@ -341,7 +344,7 @@
 				</section>
 
 				<!-- Pattern de déploiement -->
-				<section id="eac">
+				<section id="feature_flipping">
 					<h3>Feature Flipping</h3>
 					<small>
 						<p>Activer / désactiver dans le produit des fonctionnalités sans forcément relivrer de code.</p>
@@ -361,7 +364,7 @@
 					</small>
 				</section>
 
-				<section>
+				<section id="tdd">
 					<h3>Test Driven Development</h3>
 					<small>
 						<p>Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.</p>
@@ -385,10 +388,9 @@
 							<li>Le test est au rouge tant que la fonctionnalité n'est pas terminée.</li>
 						</ul>
 					</small>
-
 				</section>
 
-					<section>
+					<section id="test">
 						<h3>Test en continu</h3>
 						<small>
 							<p>Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés &rarr; antipattern</p>
@@ -412,11 +414,14 @@
 					</section> -->
 
 				</section>
-				<section>
-					<section>
+
+				<section id="conclusion">
+
+					<section id="conclusion_titre">
 					  <h1>Conclusion</h1>
 					</section>
-					<section>
+
+					<section id="devops_mourir">
 						<h2>Devops va t il mourir ?</h2>
 						<h3><red>Spoiler alert</red></h3>
 						<p class=fragment>Non.
@@ -428,7 +433,7 @@
 						</p> -->
 					</section>
 
-					<section>
+					<section id="retenir">
 						<h2>Que retenir</h2>
 						<p>Un client demande du DEVOPS :</p>
 						<small>
@@ -451,11 +456,12 @@
 						</small>
 					</section>
 
-					<section>
+					<section id="questions">
 						<h2>Questions?</h2>
 						<p><img src="img/questions.jpg" alt="questions" width="600" /></p>
 					</section>
-					<section id="roti_return_on_time_invested">
+
+					<section id="roti">
 						<h2>ROTI : Return On Time Invested</h2>
 						<!-- https://atelier-collaboratif.com/roti.php -->
 						<!-- Julien@niji / Niji20221. -->
