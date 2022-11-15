@@ -85,7 +85,7 @@ body {
 
 .reveal red {
   font-size: 1em;
-  text-shadow: 1px 1px 1px red, 0 0 0 red;
+  text-shadow: 1px 1px 1px grey, 0 0 0 red;
   color: #f00;
 }
 

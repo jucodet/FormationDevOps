@@ -57,7 +57,7 @@
 						C'est un goulot d'étranglement de la performance globale et finalement l'entreprise est pénalisée.
 					</p>
 					<p>
-						<img src="img/fasterstronger.png" alt="goals" width="300" />
+						<img src="img/fasterstronger.jpg" alt="goals" width="300" />
 					</p>
 				</section>
 
@@ -76,7 +76,7 @@
 							<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
 						</div>
 						<div class="imageblock" style="">
-							<img src="img/manifesto.png" alt="manifesto" width="600" />
+							<img src="img/manifesto.jpg" alt="manifesto" width="600" />
 						</div>
 					</section>
 
@@ -84,7 +84,7 @@
 						<h2>Mettons de coté les buzzwords</h2>
 						<div><strong>L'Agilité est une culture</strong></div>
 						<div class="imageblock" style="">
-							<img src="img/buzzwords.png" alt="buzzwords" width="400" />
+							<img src="img/buzzwords.jpg" alt="buzzwords" width="400" />
 						</div>
 						<div>
 							On est juste plus ou moins Agile par rapport à une autre référence.
@@ -173,7 +173,7 @@
 
 					<section>
 						<h2>Quels moyens?</h2>
-						<p><img src="img/teams.png" alt="teams" width="900" /></p>
+						<p><img src="img/teams.jpg" alt="teams" width="900" /></p>
 						<div>Et ensuite ?</div>
 					</section>
 
@@ -183,8 +183,8 @@
 					<section section data-transition="zoom-out">
 						<h3>DEVOPS comme extension de l'Agilité.</h3>
 						<div class="r-stack">
-							<img class="fragment" src="img/devops_matrix1.png" alt="matrix" width="600" />
-							<img class="fragment" src="img/devops_matrix2.png" alt="matrix" width="600" />
+							<img class="fragment" src="img/devops_matrix1.jpg" alt="matrix" width="600" />
+							<img class="fragment" src="img/devops_matrix2.jpg" alt="matrix" width="600" />
 						</div>
 
 						<p>Comme l'Agilité, la maturité DevOps se mesure par l'application de concepts</p>
@@ -194,7 +194,7 @@
 					<!-- idéalement, il faudrait un nouvel axe "écoresp" à cette matrice -->
 					<section section data-transition="zoom-in">
 						<h2>Oui, mais</h2>
-						<medium>
+						<small>
 							<ul>
 								<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des bugs</li>
 								<li>livrer + vite sans vision produit ni UX = livrer + vite le mauvais produit</li>
@@ -204,8 +204,8 @@
 							DevOps a donc rendu des organisations efficaces, puis avec le temps s'est étendu à toute une série d'autres concepts liés les uns aux autres.
 							En mettant en place ces concepts, l'organisation devient efficiente.
 						</p>
-						</medium>
-						<div><img class="fragment fade-up" src="img/devops_matrix.png" alt="matrix" width="600" /></div>
+					</small>
+					<div><img class="fragment fade-up" src="img/devops_matrix.jpg" alt="matrix" width="600" /></div>
 
 					</section>
 					<!-- <section>
@@ -231,10 +231,10 @@
 			<section>
 
 				<section id="les concepts">
-					<h2>Les concepts</h2>
+					<h1>Les concepts</h1>
 				</section>
 
-				<section id="les définitions">
+				<section data-visibility="hidden" id="les définitions">
 					<h3>CI/CD</h3>
 					<ul>
 						<li>CI (intégration continue) : assurer une livraison continue de code </li>
@@ -248,7 +248,7 @@
 
 					<h3>Les microservices / la SOA</h3>
 						<div>
-							<p>Architecture monolithique, nécessaire à chaque changement :</p>
+							<p>Dans une architecture monolithique, à chaque changement :</p>
 							<medium>
 							<ul>
 								<li>build intégral</li>
@@ -259,7 +259,7 @@
 
 							<p><img src="img/monolith2microservice.jpg" alt="nouilles" width="200" /></p>
 
-							<p>Microservice :</p>
+							<p>Dans une architecture orienté services / microservices, à chaque changement :</p>
 							<medium>
 							<ul>
 								<li>chaque service porte une seule responsabilité</li>
@@ -277,10 +277,10 @@
 						<!-- Les VM émulent l'application, l'OS et les systèmes de fichier.
 						Les containers utilisent l'OS de l'hote (la VM) -->
 						<small>
-							Evolution des machines virtuelles, permettant d'embarquer dans une même <italic>image</italic> l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
+							Evolution des machines virtuelles, permettant d'embarquer dans une même image ("paquet") l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
 						</small>
 						<small>
-							<p class="fragment grow"><img src="img/containers.jpg" alt="devops" width="400" /></p>
+							<p class="fragment grow"><img class="fragment grow" src="img/containers.jpg" alt="devops" width="400" /></p>
 							<h4>Avantages</h4>
 							<ul>
 								<li>Portabilité : l'application est autonome, déployable et exécutable sur n'importe quelle machine avec un OS et un moteur d'exécution de container. Build once, deploy anywhere.</li>
@@ -317,8 +317,8 @@
 						<h4>Avantages</h4>
 						<ul>
 							<li>Intégration automatique du code <red>#CI</red></li>
-							<li>Déploiement automatique du code<red>#CD</red></li>
-							<li>Les erreurs sont identifiées au plus tôt</li>
+							<li>Déploiement automatique du code <red>#CD</red></li>
+							<li>Les erreurs sont identifiées au plus tôt <red>#failfast</red></li>
 							<li>Le pipeline c'est aussi du code ! <red>#everythingascode</red></li>
 						</ul>
 					</small>
@@ -344,8 +344,7 @@
 				<section id="eac">
 					<h3>Feature Flipping</h3>
 					<small>
-						<p>Activer / désactiver dans le produit des fonctionnalités sans relivrer de code.</p>
-						<p>Par du code, des injections de dépendances, des outils, des fonctionnalités.</p>
+						<p>Activer / désactiver dans le produit des fonctionnalités sans forcément relivrer de code.</p>
 					</small>
 					<p><img src="img/featureflipping.png" alt="featureflipping" width="500" /></p>
 					<small>
@@ -395,7 +394,7 @@
 							<p>Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés &rarr; antipattern</p>
 							<p>Le test en continu augmente la part de tests automatisés</p>
 						</small>
-						<p><img src="img/pyramide.png" alt="tests" width="600" /></p>
+						<p><img src="img/pyramide.jpg" alt="tests" width="500" /></p>
 						<small>
 							<h4>Avantages</h4>
 							<ul>
@@ -414,16 +413,15 @@
 
 				</section>
 				<section>
-					<section data-autoslide="500">
+					<section>
 					  <h1>Conclusion</h1>
-					</section>
-					<section data-auto-animate>
-						<h1 style="margin-top: 100px; color: red;">Conclusion</h1>
 					</section>
 					<section>
 						<h2>Devops va t il mourir ?</h2>
-						<h3>Spoiler : non.</h>
-						<p><img src="img/trends.jpg" alt="atdd" width="1000" /></p>
+						<h3><red>Spoiler alert</red></h3>
+						<p class=fragment>Non.
+							<img src="img/trends.jpg" alt="atdd" width="1000" />
+						</p>
 						<!-- <p>
 							<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script>
 							<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"devops","geo":"","time":"2004-01-01 2022-11-11"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=devops","guestPath":"https://trends.google.fr:443/trends/embed/"}); </script>
@@ -440,8 +438,8 @@
 							</ul>
 						</small>
 
-						<p><big><red>Les outils changent, les gens non.</red></big></p>
-						<p><img src="img/injury.png" alt="injury" width="250" /></p>
+						<p><big><red>Les outils changent et ne sont pas importants, les gens c'est le contraire.</red></big></p>
+						<p><img src="img/injury.jpg" alt="injury" width="250" /></p>
 						<p>L'important :</p>
 						<small>
 							<ul>
