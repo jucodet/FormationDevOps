@@ -93,8 +93,10 @@
 						Ex: "Désormais on livre chaque semaine"
 					</div>
 					<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
-				<!-- MAintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
-			Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT-->
+					<aside class="notes">
+						Maintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
+						Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT
+					</aside>
 				</section>
 
 				<section data-transition="zoom" id="agile_mat_soat">
@@ -139,13 +141,14 @@
 
 			</section>
 
-<!-- Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes -->
-<!-- SCRUM = Sprints, backlog, PO -->
-<!-- XP = ATDD, DDD, spec par l'ex  -->
-<!-- Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue) -->
-			<section id="devops">
 
-				<section id="devops_origine">
+			<section id="devops">
+					<aside class="notes">
+						Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes
+						SCRUM = Sprints, backlog, PO
+						XP = ATDD, DDD, spec par l'ex
+						Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue)
+					</aside>
 					<h2>La naissance d'une tendance</h2>
 					<div class="ulist">
 						<ul>
@@ -181,10 +184,12 @@
 					<div>Et ensuite ?</div>
 				</section>
 
-				<!-- Les choix d'architecture technique qui vont être opérés pour le projet, la façon dont le projet va être construit  -->
-				<!-- Les choix sur la façon de compiler et déployer les fonctionnalités -->
-				<!-- En grandissant ainsi on prétend donc livrer + souvent + vite et - cher -->
 				<section section data-transition="zoom-out" id="devops_extends_agility">
+					<aside class="notes">
+						Les choix d'architecture technique qui vont être opérés pour le projet, la façon dont le projet va être construit  -->
+						Les choix sur la façon de compiler et déployer les fonctionnalités
+						En grandissant ainsi on prétend donc livrer + souvent + vite et - cher
+					</aside>
 					<h3>DEVOPS comme extension de l'Agilité.</h3>
 					<div class="r-stack">
 						<img class="fragment" src="img/devops_matrix1.jpg" alt="matrix" width="600" />
@@ -195,8 +200,10 @@
 					<p>Si l'on s'en tient à la définition théorique de DevOps, en appliquant des changements sur le build, l'architecture et le déploiement, alors on grandit en maturité.</p>
 				</section>
 
-				<!-- idéalement, il faudrait un nouvel axe "écoresp" à cette matrice -->
 				<section section data-transition="zoom-in" id="devops_matrix">
+					<aside class="notes">
+ 						Idéalement, il faudrait un nouvel axe "écoresp" à cette matrice
+					</aside>
 					<h2>Oui, mais</h2>
 					<small>
 						<ul>
@@ -213,28 +220,9 @@
 						<img class="fragment fade-up" src="img/devops_matrix.jpg" alt="matrix" width="600" />
 					</div>
 				</section>
-				<!-- <section>
-					<h2>Observations</h2>
-					<ul>
-						<li>On ne peut pas partager une vision produit (CULTURE) sans définir et suivre les bons indicateurs (REPORTING)</li>
-						<li>On ne peut pas deployer en continu (DEPLOY) sans une stratégie de tests adaptée (TEST), ni sans (BUILD) industrialisé.</li>
-						<li>On ne peut pas attendre de l'UX qu'elle séduise le client final si leurs feedbacks ne sont pas fréquents (CULTURE, DEPLOY, REPORTING)</li>
-					</ul>
-				</section> -->
-
-				<!-- <section>
-				<h2>DEVOPS : d'autres définitions</h2>
-				"Cesser de dépendre de l'inspection de masse pour obtenir la qualité. Améliorer le processus et intégrer la qualité dans le produit dès le départ."
-				W. Edwards Deming
-
-				"Ce n'est pas parce que nous utilisons des conteneurs que nous "faisons du DevOps"
-				Jérôme Petazzoni, Developer Advocate @Docker
-			</section> -->
-
 			</section>
 
 			<section id="concepts">
-
 				<section id="concepts_titre">
 					<h1>Les concepts</h1>
 				</section>
@@ -279,8 +267,11 @@
 				<section id="container">
 					<!-- #Docker #Kubernetes-->
 					<h3>La containerisation</h3>
-					<!-- Les VM émulent l'application, l'OS et les systèmes de fichier.
-					Les containers utilisent l'OS de l'hote (la VM) -->
+						<aside class="notes">
+							Les VM émulent l'application, l'OS et les systèmes de fichier.
+							Les containers utilisent l'OS de l'hote (la VM)
+						</aside>
+
 					<small>
 						Evolution des machines virtuelles, permettant d'embarquer dans une même image ("paquet") l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
 					</small>
@@ -295,8 +286,10 @@
 					</small>
 				</section>
 
-				<!-- Pour aller + loin que l'appli + son environnement d'exécution : l'IAC -->
-				<section id="iac">
+					<section id="iac">
+						<aside class="notes">
+				 			Pour aller + loin que l'appli + son environnement d'exécution : l'IAC -->
+						</aside>
 					<h3>Infra as Code</h3>
 					<small>
 						<p>Considérer que l'architecture fait partie du source control, la manipuler comme une partie du code du projet <red>#IAC</red>.</p>
@@ -345,8 +338,10 @@
 					</small>
 				</section>
 
-				<!-- Pattern de déploiement -->
 				<section id="feature_flipping">
+					<aside class="notes">
+						Pattern de déploiement
+					</aside>
 					<h3>Feature Flipping</h3>
 					<small>
 						<p>Activer / désactiver dans le produit des fonctionnalités sans forcément relivrer de code.</p>
@@ -408,17 +403,9 @@
 							</ul>
 						</small>
 					</section>
-
-					<!-- <section>
-						<h2>Keep C.A.L.M.S. and <strong>DEVOPS</strong> !</h2>
-						DEVOPS n'est pas une formule magique, mais le prolongement de l'Agilité.
-						<p><img src="img/CALMS.png" alt="CALMS" width="600" /></p>
-					</section> -->
-
 				</section>
 
 				<section id="conclusion">
-
 					<section id="conclusion_titre">
 					  <h1>Conclusion</h1>
 					</section>
