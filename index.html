@@ -19,8 +19,11 @@
 		<div class="slides">
 			<section class="title" section data-background-image="css/theme/image/sky.png"
 				data-background-size="100px" data-background-repeat="no-repeat" data-background-position="bottom 90px left 20px">
-				<h1 class="r-fit-text">DEVOPS</h1>
-				<h1 class="r-fit-text">Pour de vrai</h1>
+				<div class="r-stack">
+  				<p class="blur"><img src="img/devops_cover2.png" width="800"></p>
+					<h1 class="r-fit-text glow">DEVOPS</h1>
+				</div>
+				<h2 class="r-fit-text">Pour de vrai</h2>
 			</section>
 
 			<section data-background-image="css/theme/image/skywire.png"
@@ -88,7 +91,8 @@
 							Ex: "Désormais on livre chaque semaine"
 						</div>
 						<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
-
+					<!-- MAintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
+				Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT-->
 					</section>
 
 					<section data-transition="zoom">
@@ -100,7 +104,7 @@
 						<small>
 							<ul>
 								<li>Organisations chaotiques : pas de méthodes, "ça tombe en marche"</li>
-								<li>Organisations théoriques : méthodes riches, processus, standards, top-down</li>
+								<li>Organisations théoriques : méthodes riches, processus, standards, top-down</li><!-- ITIL, CMMI, ISO -->
 								<li>Organisation efficaces : ça marche, mais c'est fatigant (startups)</li>
 								<li>Organisation efficiente : ça marche et c'est facile : l'efficacité est maîtrisée</li>
 							</ul>
@@ -132,6 +136,10 @@
 					</section>
 				</section>
 
+<!-- Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes -->
+<!-- SCRUM = Sprints, backlog, PO -->
+<!-- XP = ATDD, DDD, spec par l'ex  -->
+<!-- Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue) -->
 				<section>
 					<section id="devops_origine">
 						<h2>La naissance d'une tendance</h2>
@@ -169,24 +177,35 @@
 						<div>Et ensuite ?</div>
 					</section>
 
+					<!-- Les choix d'architecture technique qui vont être opérés pour le projet, la façon dont le projet va être construit  -->
+					<!-- Les choix sur la façon de compiler et déployer les fonctionnalités -->
+					<!-- En grandissant ainsi on prétend donc livrer + souvent + vite et - cher -->
 					<section section data-transition="zoom-out">
 						<h3>DEVOPS comme extension de l'Agilité.</h3>
-						<img src="img/devops_matrix.png" alt="matrix" width="700" />
-						<p>On a vu qu'on était plus ou moins Agile</p>
-						<o>La maturité DevOps peut aussi se mesurer par des changements sur le build d'une part (dév), l'architecture et le déploiement d'autre part.</p>
+						<div class="r-stack">
+							<img class="fragment" src="img/devops_matrix1.png" alt="matrix" width="600" />
+							<img class="fragment" src="img/devops_matrix2.png" alt="matrix" width="600" />
+						</div>
+
+						<p>Comme l'Agilité, la maturité DevOps se mesure par l'application de concepts</p>
+						<p>Si l'on s'en tient à la définition théorique de DevOps, en appliquant des changements sur le build, l'architecture et le déploiement, alors on grandit en maturité.</p>
 					</section>
 
+					<!-- idéalement, il faudrait un nouvel axe "écoresp" à cette matrice -->
 					<section section data-transition="zoom-in">
 						<h2>Oui, mais</h2>
 						<medium>
 							<ul>
-								<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des anomalies</li>
-								<li>livrer + vite sans vision produit et UX = livrer + vite le mauvais produit</li>
+								<li>livrer + souvent sans stratégie de test adaptée = livrer + souvent des bugs</li>
+								<li>livrer + vite sans vision produit ni UX = livrer + vite le mauvais produit</li>
 								<li>livrer - cher pour dépenser + en gestion documentaire = revient + cher</li>
 							</ul>
+						<p>
+							DevOps a donc rendu des organisations efficaces, puis avec le temps s'est étendu à toute une série d'autres concepts liés les uns aux autres.
+							En mettant en place ces concepts, l'organisation devient efficiente.
+						</p>
 						</medium>
-						<p>DevOps a donc rendu des organisations efficaces, puis avec le temps s'est étendu à toute une série d'autres concepts liés les uns aux autres.
-						En mettant en place ces concepts, l'organisation devient efficiente.</p>
+						<div><img class="fragment fade-up" src="img/devops_matrix.png" alt="matrix" width="600" /></div>
 
 					</section>
 					<!-- <section>
@@ -225,43 +244,169 @@
 					<p><img src="img/devops.png" alt="devops" width="600" /></p>
 				</section>
 
+				<section id="microservice">
+
+					<h3>Les microservices / la SOA</h3>
+						<div>
+							<p>Architecture monolithique, nécessaire à chaque changement :</p>
+							<medium>
+							<ul>
+								<li>build intégral</li>
+								<li>déploiement intégral</li>
+								<li>duplication intégrale sur chaque serveur cible</li>
+							</ul>
+							</medium>
+
+							<p><img src="img/monolith2microservice.jpg" alt="nouilles" width="200" /></p>
+
+							<p>Microservice :</p>
+							<medium>
+							<ul>
+								<li>chaque service porte une seule responsabilité</li>
+								<li>chaque service peut être déployé indépendamment</li>
+								<li>à chaque service son équipe / sa BDD / son langage / sa plateforme...</li>
+							</ul>
+						</medium>
+					</div>
+
+				</section>
+
 				<section id="container">
-					<h2>La containerisation</h>
-						Build once deploy everywhere
-					</section>
+					<!-- #Docker #Kubernetes-->
+					<h3>La containerisation</h3>
+						<!-- Les VM émulent l'application, l'OS et les systèmes de fichier.
+						Les containers utilisent l'OS de l'hote (la VM) -->
+						<small>
+							Evolution des machines virtuelles, permettant d'embarquer dans une même <italic>image</italic> l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
+						</small>
+						<small>
+							<p class="fragment grow"><img src="img/containers.jpg" alt="devops" width="400" /></p>
+							<h4>Avantages</h4>
+							<ul>
+								<li>Portabilité : l'application est autonome, déployable et exécutable sur n'importe quelle machine avec un OS et un moteur d'exécution de container. Build once, deploy anywhere.</li>
+								<li>Isolation : chaque container est une application avec son propre cycle de vie et indépendante des autres <red>#microservices</red></li>
+								<li>Orchestration : des outils permettent de créer, déployer, orchestrer les containers automatiquement pour par ex les mettre à l'échelle <red>#kubernetes</red></li>
+							</ul>
+						</small>
+				</section>
 
-					<section id="pipeline">
-						<h2>Le pipeline de déploiement</h>
-							...
-					</section>
+				<!-- Pour aller + loin que l'appli + son environnement d'exécution : l'IAC -->
+				<section>
+					<h3>Infra as Code</h3>
+					<small>
+						<p>Considérer que l'architecture fait partie du source control, la manipuler comme une partie du code du projet <red>#IAC</red>.</p>
+					</small>
+					<p><img src="img/IAC.jpg" alt="devops" width="600" /></p>
+					<small>
+						<h4>Avantages</h4>
+						<ul>
+							<li>Augmente la cohérence entre architecture et application</li>
+							<li>Instanciation idempotente donc fiable, et automatique de l'infrastructure à partir de scripts. <red>#terraform #forge</red></li>
+						</ul>
+					</small>
+				</section>
+
+				<section id="pipeline">
+					<h3>Le pipeline de déploiement</h3>
+					<small>
+						<p>Système permettant d'automatiser davantage les étapes traditionnellement manuelles, d'intégration du nouveau code produit, vers la production.</p>
+						<p>Livrer un changement devient un scénario.</p>
+					</small>
+					<p><img src="img/pipeline.png" alt="devops" width="800" /></p>
+					<small>
+						<h4>Avantages</h4>
+						<ul>
+							<li>Intégration automatique du code <red>#CI</red></li>
+							<li>Déploiement automatique du code<red>#CD</red></li>
+							<li>Les erreurs sont identifiées au plus tôt</li>
+							<li>Le pipeline c'est aussi du code ! <red>#everythingascode</red></li>
+						</ul>
+					</small>
+				</section>
+
+				<section id="eac">
+					<h3>Everything As Code</h3>
+					<small>
+						<p>Le code de l'infra et des pipelines fait partie du code du projet. La documentation aussi, les tests aussi, la sécurité ainsi que tout ce qui peut être codé.</p>
+						<p>Le support de cette présentation est du code, il fait partie du code d'un projet et pèse TODO Mo.</p>
+					</small>
+					<p><img src="img/eac.jpg" alt="devops" width="500" /></p>
+					<small>
+						<h4>Avantages</h4>
+						<ul>
+							<li>Augmente encore la cohérence entre documentation, application, tests, etc.</li>
+							<li>Le fond de la documentation est agnostique de la forme <red>#docascode</red></li>
+						</ul>
+					</small>
+				</section>
+
+				<!-- Pattern de déploiement -->
+				<section id="eac">
+					<h3>Feature Flipping</h3>
+					<small>
+						<p>Activer / désactiver dans le produit des fonctionnalités sans relivrer de code.</p>
+						<p>Par du code, des injections de dépendances, des outils, des fonctionnalités.</p>
+					</small>
+					<p><img src="img/featureflipping.png" alt="featureflipping" width="500" /></p>
+					<small>
+						<h4>Avantages</h4>
+						<ul>
+							<li>Déployer en continu</li>
+							<li>Sécuriser les déploiements</li>
+							<li>Permet d'expérimenter une fonctionnalité</li>
+							<li>Customiser l'application par populations</li>
+							<li>Gérer les fonctionnalités payantes</li>
+							<li>Permet la distinction code stable / code terminé.</li>
+							<li>Minimiser le nombre de branches dans le code.</li>
+						</ul>
+					</small>
+				</section>
+
+				<section>
+					<h3>Test Driven Development</h3>
+					<small>
+						<p>Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.</p>
+						<p>Le test driven development considère les tests comme la spécification du produit, avant son développement <red>#TDD #ATDD, #BDD</red>.</p>
+						<p>Une fonctionnalité devient prête à développer quand elle a au moins 1 test d'acceptance et les critères d'acceptation associés.</p>
+					</small>
+					<p>
+						<pre><code data-trim data-noescape>
+							scenario “Gold-level customer with $50 in shopping cart”, {
+							 	given “ a Gold-level customer”
+							 	when “their shopping cart totals $50 or more”
+							 	then “ they should receive a 15% discount off the total price”
+							}
+						</code></pre>
+					</p>
+					<small>
+						<h4>Avantages</h4>
+						<ul>
+							<li>+ de communication entre PO et équipe de dev</li>
+							<li>La specification par l'exemple pour un meilleur partage de la source de vérité <red>#SSOT</red></li>
+							<li>Le test est au rouge tant que la fonctionnalité n'est pas terminée.</li>
+						</ul>
+					</small>
+
+				</section>
 
 					<section>
-						<h2>Infra as Code</h2>
-						Considérer que l'architecture fait partie du source control, la manipuler comme une partie du projet.
-						- Augmente la cohérence entre architecture et application,
-						- Instanciation idempotente donc fiable, et automatique de l'infrastructure à partir de scripts. #terraform #forge
-					</section>
-
-					<section><h2>Everything as Code</h2></section>
-
-					<section><h2>Feature Flipping</h2></section>
-
-					<section>
-						<h2>Test en continu</h2>
-						Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés. -> antipattern
-						Le test en continu augmente la part de tests automatisés.
+						<h3>Test en continu</h3>
+						<small>
+							<p>Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés &rarr; antipattern</p>
+							<p>Le test en continu augmente la part de tests automatisés</p>
+						</small>
 						<p><img src="img/pyramide.png" alt="tests" width="600" /></p>
+						<small>
+							<h4>Avantages</h4>
+							<ul>
+								<li>Livrer en continu devient possible</li>
+								<li>L'humain ne conserve que les tâches à forte valeur ajoutée</li>
+								<li>L'assurance de gagner en sécurité (non-régression)</li>
+							</ul>
+						</small>
 					</section>
 
-					<section>
-						<h2>Test Agile</h2>
-						Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.
-						Le test Agile considère les tests comme la spécification du produit, avant son développement.
-						- tester pour spécifier, spec par l'exemple
-						<p><img src="img/atdd.png" alt="atdd" width="600" /></p>
-					</section>
-
-						<!-- <section>
+					<!-- <section>
 						<h2>Keep C.A.L.M.S. and <strong>DEVOPS</strong> !</h2>
 						DEVOPS n'est pas une formule magique, mais le prolongement de l'Agilité.
 						<p><img src="img/CALMS.png" alt="CALMS" width="600" /></p>
@@ -269,38 +414,55 @@
 
 				</section>
 				<section>
-					<section data-autoslide="2000">
-
-						<p class="fragment">Conclusion</p>
+					<section data-autoslide="500">
+					  <h1>Conclusion</h1>
+					</section>
+					<section data-auto-animate>
+						<h1 style="margin-top: 100px; color: red;">Conclusion</h1>
 					</section>
 					<section>
 						<h2>Devops va t il mourir ?</h2>
 						<h3>Spoiler : non.</h>
 						<p><img src="img/trends.jpg" alt="atdd" width="1000" /></p>
-						<p>
+						<!-- <p>
 							<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script>
-							<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"devops","geo":"","time":"2004-01-01 2022-11-11"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=devops","guestPath":"https://trends.google.fr:443/trends/embed/"}); </script></p>
+							<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"devops","geo":"","time":"2004-01-01 2022-11-11"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=devops","guestPath":"https://trends.google.fr:443/trends/embed/"}); </script>
+						</p> -->
 					</section>
+
 					<section>
-						Exprimer ses intentions et contraintes
-						- Faire preuve d'empathie,
-						- Partager ses contraintes,
-						- Accepter celles des autres.
-						Ex : l'équipe de dev veut changer le système tous les matins, pendant que les ops veulent la stabilité de l'infra, donc le moins de changements possible.
-						<p><img src="img/injury.png" alt="injury" width="600" /></p>
+						<h2>Que retenir</h2>
+						<p>Un client demande du DEVOPS :</p>
+						<small>
+							<ul>
+								<li>dans 90% des cas besoin de compétences de développement</li>
+								<li>dans 10% des cas besoin de compétences en coaching agile</li>
+							</ul>
+						</small>
+
+						<p><big><red>Les outils changent, les gens non.</red></big></p>
+						<p><img src="img/injury.png" alt="injury" width="250" /></p>
+						<p>L'important :</p>
+						<small>
+							<ul>
+								<li>Savoir exprimer ses intentions et contraintes</li>
+								<li>Faire preuve d'empathie</li>
+								<li>Partager ses contraintes</li>
+								<li>Accepter celles des autres</li>
+							</ul>
+						</small>
 					</section>
+
 					<section>
 						<h2>Questions?</h2>
 						<p><img src="img/questions.jpg" alt="questions" width="600" /></p>
 					</section>
 					<section id="roti_return_on_time_invested">
 						<h2>ROTI : Return On Time Invested</h2>
+						<!-- https://atelier-collaboratif.com/roti.php -->
+						<!-- Julien@niji / Niji20221. -->
 						<div class="ulist">
-							<ul>
-								<li>
-									<p>FUN vs VALUE</p>
-								</li>
-							</ul>
+							<p><img src="img/roti.png" alt="questions" width="600" /></p>
 						</div>
 					</section>
 				</section>

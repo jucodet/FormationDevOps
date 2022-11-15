@@ -63,7 +63,13 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+ }
 
 .reveal h2 {
   font-size: 1.6em; }
@@ -76,6 +82,26 @@ body {
 
 .reveal h1 {
   text-shadow: none; }
+
+.reveal red {
+  font-size: 1em;
+  text-shadow: 1px 1px 1px red, 0 0 0 red;
+  color: #f00;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.reveal blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
 
 /*********************************************
  * OTHER
