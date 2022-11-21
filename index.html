@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+	<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
 	<link rel="stylesheet" href="css/theme/niji.css" id="theme">
 
 	<!-- Theme used for syntax highlighted code -->
@@ -39,17 +39,23 @@
 
 			<section id="constat">
 				<h2>Constat</h2>
-				<small>1 entreprise = n silos (achats, direction métier, développeurs, exploitants...) = n objectifs</small>
+				<small>1 entreprise = n silos (achats, direction métier, développeurs, exploitants...) = n objectifs
 				<img src="img/theOffice.png" alt="wall" width = 500 />
-				<small>Les développeurs veulent changer le système, tout le temps
-					<section data-autoslide="5000" id="wall_of_confusion">
-						<p class="fragment grow highlight-red">Mais</p>
-						<p class="fragment fade-in">Les opérateurs veulent conserver un système stable</p>
-						<p class="fragment fade-in">Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests</p>
-						<p class="fragment fade-in">Soit le moins de changement possible!</p>
-						<p class="fragment fade-in">...</p>
-					</section>
+					<p class="fragment grow highlight-red">Mais</p>
+					<p class="fragment">Les opérateurs veulent conserver un système stable</p>
+					<p class="fragment">Les testeurs veulent stabiliser une version pour exécuter leur campagne de tests</p>
+					<p class="fragment">Soit le moins de changement possible!</p>
+						...
+					</p>
+					<aside class="notes">
+						La perf de la compta c'est la moyenne des KPI de chacun de ses membres, mais pkoi c'est pas représentatif?
+						TTM or le système c'est du code et les dévs écrivent du code
+						Autrement dit comment définit on la perf de l'orga?
+						La perf d'une orga c'est sa capacité à déliver les bons produits rapidement, souvent et pas cher
+						Pas forcément des objectifs qui se parlent
+					</aside>
 				</small>
+
 			</section>
 
 			<section id="wall_of_confusion">
@@ -77,17 +83,20 @@
 					<div class="paragraph">
 						<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
 					</div>
-					<div class="imageblock" style="">
-						<img src="img/manifesto.jpg" alt="manifesto" width="600" />
+					<div class="paragraph">
+						<img src="img/manifesto.jpg" alt="manifesto" width="400" />
+					</div>
+					<div class="paragraph">
+						<img src="img/basique-simple.gif" alt="manifesto" width="200" />
 					</div>
 				</section>
 
 				<section id="agilite_culture">
 					<h2>Mettons de coté les buzzwords</h2>
-					<div><strong>L'Agilité est une culture</strong></div>
 					<div class="imageblock" style="">
 						<img src="img/buzzwords.jpg" alt="buzzwords" width="400" />
 					</div>
+					<div><strong>L'Agilité est une culture</strong></div>
 					<div>
 						On est juste plus ou moins Agile par rapport à une autre référence.
 						Ex: "Désormais on livre chaque semaine"
@@ -95,6 +104,7 @@
 					<p><small>Oui mais d'où je pars et jusqu'où je peux aller ?</small></p>
 					<aside class="notes">
 						Maintenant qu'on a vu que l'agilité n'est pas une destination mais un voyage
+						On va voir que cela peut se mesurer
 						Je voudrais vous partager une lecture de l'agilité qui m'a marquée, dont l'auteur est la boite de consulting SOAT
 					</aside>
 				</section>
@@ -138,16 +148,17 @@
 						<div><strong>&rarr; Et si on avait travaillé comme ça depuis le début ?</strong></div>
 					</div>
 				</section>
-
 			</section>
 
 
 			<section id="devops">
 					<aside class="notes">
+						Pourquoi livrer chaque sprint alors qu'on peut livrer en continu?
 						Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes
 						SCRUM = Sprints, backlog, PO
 						XP = ATDD, DDD, spec par l'ex
 						Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue)
+						Depuis 2010 le CD s'améliore grâce aux outils mais pas que, on va le voir
 					</aside>
 					<h2>La naissance d'une tendance</h2>
 					<div class="ulist">
@@ -159,13 +170,18 @@
 									<li>Manifeste Agile en 2001</li>
 								</ol>
 							</li>
-							<li><strong>Lean</strong> manufacturing chez Toyota 1900-1993</p></li>
+							<li>
+								<strong>Lean</strong>
+								<a href="https://www.toyota.fr/decouvrez-toyota/groupe/systeme-production-toyota"> manufacturing chez Toyota 1900-1993</a>
+							</li>
 						</ul>
 						<p>Agile + Lean = <strong>Lean Software Development (2003)</strong></p></li>
 						<p>Puis <strong>DevOps</strong> (2009)</strong> et <strong>Continuous Delivery</strong> (2010).</p>
 					</div>
+
 				</section>
 
+				<aside class="notes">DEVOPS repose sur l'automatisation pour rationaliser le développement et le déploiement de logiciels</aside>
 				<section id="devops_definition">
 					<h2>DEVOPS : une définition</h2>
 					<blockquote>
@@ -190,14 +206,14 @@
 						Les choix sur la façon de compiler et déployer les fonctionnalités
 						En grandissant ainsi on prétend donc livrer + souvent + vite et - cher
 					</aside>
-					<h3>DEVOPS comme extension de l'Agilité.</h3>
+					<h3>Start small, grow fast</h3>
 					<div class="r-stack">
 						<img class="fragment" src="img/devops_matrix1.jpg" alt="matrix" width="600" />
 						<img class="fragment" src="img/devops_matrix2.jpg" alt="matrix" width="600" />
 					</div>
 
-					<p>Comme l'Agilité, la maturité DevOps se mesure par l'application de concepts</p>
-					<p>Si l'on s'en tient à la définition théorique de DevOps, en appliquant des changements sur le build, l'architecture et le déploiement, alors on grandit en maturité.</p>
+					<p>Comme extension de l'Agilité, la maturité DevOps se mesure par l'application de petits changements</p>
+					<p>De nouveaux concepts sur le build, l'architecture et le déploiement, pour grandir en maturité.</p>
 				</section>
 
 				<section section data-transition="zoom-in" id="devops_matrix">
@@ -238,7 +254,9 @@
 				</section>
 
 				<section id="microservice">
-
+					<aside class="notes">
+						Service = unité de code autonome et réutilisable, conçue pour réaliser une tâche simple déployable indépendamment.
+					</aside>
 					<h3>Les microservices / la SOA</h3>
 						<div>
 							<p>Dans une architecture monolithique, à chaque changement :</p>
@@ -249,9 +267,7 @@
 								<li>duplication intégrale sur chaque serveur cible</li>
 							</ul>
 							</medium>
-
 							<p><img src="img/monolith2microservice.jpg" alt="nouilles" width="200" /></p>
-
 							<p>Dans une architecture orienté services / microservices, à chaque changement :</p>
 							<medium>
 							<ul>
@@ -261,7 +277,6 @@
 							</ul>
 						</medium>
 					</div>
-
 				</section>
 
 				<section id="container">
@@ -270,13 +285,13 @@
 						<aside class="notes">
 							Les VM émulent l'application, l'OS et les systèmes de fichier.
 							Les containers utilisent l'OS de l'hote (la VM)
+							Les VM ont permis de transformer un serveur physique en logiciel pour pouvoir le manipuler et automatiser +
+							La conteneurisation va + loin et un peu comme un exe, rend l'appli portable et exécutable
 						</aside>
 
 					<small>
 						Evolution des machines virtuelles, permettant d'embarquer dans une même image ("paquet") l'application, et son environnement d'exécution minimal sans l'OS <red>#docker</red>
-					</small>
-					<small>
-						<p class="fragment grow"><img class="fragment grow" src="img/containers.jpg" alt="devops" width="400" /></p>
+						<img src="img/containers.jpg" alt="devops" width="400" />
 						<h4>Avantages</h4>
 						<ul>
 							<li>Portabilité : l'application est autonome, déployable et exécutable sur n'importe quelle machine avec un OS et un moteur d'exécution de container. Build once, deploy anywhere.</li>
@@ -305,13 +320,16 @@
 				</section>
 
 				<section id="pipeline">
+					<aside class="notes">
+						C'est un peu la frontière qui matérialise les 2 mondes des dev et des ops
+						L'automatisation de la chaine de production : ex Toyota prémontage, assemblage, test, assemblage 2, test 2, peinture, test final, emballage, expédition
+						Donc ce que je livre à mon client c'est un container avec l'appli, son env d'exéc, son pipeline
+					</aside>
 					<h3>Le pipeline de déploiement</h3>
 					<small>
 						<p>Système permettant d'automatiser davantage les étapes traditionnellement manuelles, d'intégration du nouveau code produit, vers la production.</p>
 						<p>Livrer un changement devient un scénario.</p>
-					</small>
-					<p><img src="img/pipeline.png" alt="devops" width="800" /></p>
-					<small>
+						<p><img src="img/pipeline.png" alt="devops" width="600" /></p>
 						<h4>Avantages</h4>
 						<ul>
 							<li>Intégration automatique du code <red>#CI</red></li>
@@ -320,6 +338,7 @@
 							<li>Le pipeline c'est aussi du code ! <red>#everythingascode</red></li>
 						</ul>
 					</small>
+
 				</section>
 
 				<section id="eac">
@@ -328,7 +347,7 @@
 						<p>Le code de l'infra et des pipelines fait partie du code du projet. La documentation aussi, les tests aussi, la sécurité ainsi que tout ce qui peut être codé.</p>
 						<p>Le support de cette présentation est du code, il fait partie du code d'un projet et pèse 15 Mo.</p>
 					</small>
-					<p><img src="img/eac.jpg" alt="devops" width="500" /></p>
+					<p><img src="img/eac.jpg" alt="devops" width="300" /></p>
 					<small>
 						<h4>Avantages</h4>
 						<ul>
@@ -346,7 +365,7 @@
 					<small>
 						<p>Activer / désactiver dans le produit des fonctionnalités sans forcément relivrer de code.</p>
 					</small>
-					<p><img src="img/featureflipping.png" alt="featureflipping" width="500" /></p>
+					<p><img src="img/featureflipping.png" alt="featureflipping" width="400" /></p>
 					<small>
 						<h4>Avantages</h4>
 						<ul>
@@ -362,6 +381,9 @@
 				</section>
 
 				<section id="tdd">
+					<aside class="notes">
+						Les individus et leurs interactions
+					</aside>
 					<h3>Test Driven Development</h3>
 					<small>
 						<p>Avant, le test était considéré comme un moyen de détecter les anomalies, à la fin du développement.</p>
@@ -390,10 +412,10 @@
 					<section id="test">
 						<h3>Test en continu</h3>
 						<small>
-							<p>Avant, la plupart des tests étaient exécutés manuellement par des humains, avec peu de tests automatisés &rarr; antipattern</p>
-							<p>Le test en continu augmente la part de tests automatisés</p>
+							<p>Avant, la plupart des tests étaient exécutés manuellement par des humains, peu automatisés &rarr; antipattern</p>
+							<p>Les tests les plus fréquemment exécutés doivent être automatisés</p>
 						</small>
-						<p><img src="img/pyramide.jpg" alt="tests" width="500" /></p>
+						<p><img src="img/pyramide.jpg" alt="tests" width="400" /></p>
 						<small>
 							<h4>Avantages</h4>
 							<ul>
@@ -406,6 +428,11 @@
 				</section>
 
 				<section id="conclusion">
+					<aside class="notes">
+						Devops va sans doute évoluer car repose sur des outils qui changent, et par ailleurs
+						Malgré cette prise de conscience, beaucoup essaient encore de convaincre les autres de travailler à leur façon, avec leurs outils.
+						Donc tout comme l'agilité devops ne va pas mourir mais peut être + s'axer sur l'amélioration de la vie des développeurs, en leur demandant ce qu'ils veulent faire plutôt que leur dire ce qu'ils doivent faire -> DX.
+					</aside>
 					<section id="conclusion_titre">
 					  <h1>Conclusion</h1>
 					</section>
@@ -413,9 +440,11 @@
 					<section id="devops_mourir">
 						<h2>Devops va t il mourir ?</h2>
 						<h3><red>Spoiler alert</red></h3>
-						<p class=fragment>Non.
-							<img src="img/trends.jpg" alt="atdd" width="1000" />
-						</p>
+						<div class=fragment>
+							<p>Non.</p>
+							<img src="img/trends.jpg" alt="atdd" width="700" />
+							<p>#softops? #noops?</p>
+						</div>
 						<!-- <p>
 							<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script>
 							<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"devops","geo":"","time":"2004-01-01 2022-11-11"}],"category":0,"property":""}, {"exploreQuery":"date=all&q=devops","guestPath":"https://trends.google.fr:443/trends/embed/"}); </script>
@@ -427,20 +456,20 @@
 						<p>Un client demande du DEVOPS :</p>
 						<small>
 							<ul>
-								<li>dans 90% des cas besoin de compétences de développement</li>
+								<li>dans 40% des cas besoin de compétences de développement</li>
+								<li>dans 40% des cas besoin de compétences d'administration système</li>
 								<li>dans 10% des cas besoin de compétences en coaching agile</li>
 							</ul>
 						</small>
 
 						<p><big><red>Les outils changent et ne sont pas importants, les gens c'est le contraire.</red></big></p>
-						<p><img src="img/injury.jpg" alt="injury" width="250" /></p>
+						<p><img src="img/injury.jpg" alt="injury" width="200" /></p>
 						<p>L'important :</p>
 						<small>
 							<ul>
 								<li>Savoir exprimer ses intentions et contraintes</li>
-								<li>Faire preuve d'empathie</li>
-								<li>Partager ses contraintes</li>
 								<li>Accepter celles des autres</li>
+								<li>Faire preuve d'empathie</li>
 							</ul>
 						</small>
 					</section>
@@ -518,8 +547,6 @@
 			backgroundTransition: 'fade',
 			// Number of slides away from the current that are visible
 			viewDistance: 3,
-			// Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
-			// parallaxBackgroundImage: 'css/theme/image/fondnoir.jpg',
 			parallaxBackgroundImage: 'css/theme/image/fondNiji.png',
 			// Parallax background size in CSS syntax (e.g., "2100px 900px")
 			parallaxBackgroundSize: 'cover',
