@@ -48,8 +48,9 @@
 						...
 					</p>
 					<aside class="notes">
-						La perf de la compta c'est la moyenne des KPI de chacun de ses membres, mais pkoi c'est pas représentatif?
-						TTM or le système c'est du code et les dévs écrivent du code
+						Les admins/testeurs veulent la stabilité du système cad le moins de pannes possible, donc le moins de changements possible
+						Les devs veulent changer le système c'est du code et les dévs écrivent du code
+						La perf de la compta pkoi c'est pas représentatif?
 						Autrement dit comment définit on la perf de l'orga?
 						La perf d'une orga c'est sa capacité à déliver les bons produits rapidement, souvent et pas cher
 						Pas forcément des objectifs qui se parlent
@@ -84,7 +85,7 @@
 						<p><a href="https://agilemanifesto.org">Manifeste pour le développement Agile de logiciels</a></p>
 					</div>
 					<div class="paragraph">
-						<img src="img/manifesto.jpg" alt="manifesto" width="400" />
+						<img src="img/manifesto.jpg" alt="manifesto" width="350" />
 					</div>
 					<div class="paragraph">
 						<img src="img/basique-simple.gif" alt="manifesto" width="200" />
@@ -153,11 +154,11 @@
 
 			<section id="devops">
 					<aside class="notes">
-						Pourquoi livrer chaque sprint alors qu'on peut livrer en continu?
 						Le mouvement Agile est ainsi né, avec l'apparition de plusieurs outils ou méthodes
 						SCRUM = Sprints, backlog, PO
 						XP = ATDD, DDD, spec par l'ex
 						Lean = kanban, just in time (réduc gaspi), kaizen (autonomisation teams, amélioration continue)
+						Pourquoi livrer chaque sprint alors qu'on peut livrer en continu?
 						Depuis 2010 le CD s'améliore grâce aux outils mais pas que, on va le voir
 					</aside>
 					<h2>La naissance d'une tendance</h2>
@@ -243,39 +244,31 @@
 					<h1>Les concepts</h1>
 				</section>
 
-				<section data-visibility="hidden" id="définitions">
-					<h3>CI/CD</h3>
-					<ul>
-						<li>CI (intégration continue) : assurer une livraison continue de code </li>
-						<li>CD (déploiement continu) : CI + assurer un déploiement continu de fonctionnalités</li>
-						<li>continuous delivery : CI+CD</li>
-					</ul>
-					<p><img src="img/devops.png" alt="devops" width="600" /></p>
-				</section>
-
 				<section id="microservice">
 					<aside class="notes">
 						Service = unité de code autonome et réutilisable, conçue pour réaliser une tâche simple déployable indépendamment.
 					</aside>
 					<h3>Les microservices / la SOA</h3>
-						<div>
-							<p>Dans une architecture monolithique, à chaque changement :</p>
-							<medium>
+					<div>
+						<p>Dans une architecture monolithique, à chaque changement :</p>
+						<small>
 							<ul>
 								<li>build intégral</li>
 								<li>déploiement intégral</li>
 								<li>duplication intégrale sur chaque serveur cible</li>
 							</ul>
-							</medium>
-							<p><img src="img/monolith2microservice.jpg" alt="nouilles" width="200" /></p>
+						</small>
+						<p><img src="img/monolith2microservice.jpg" alt="nouilles" width="200" /></p>
+						<medium>
 							<p>Dans une architecture orienté services / microservices, à chaque changement :</p>
-							<medium>
+						</medium>
+						<small>
 							<ul>
 								<li>chaque service porte une seule responsabilité</li>
 								<li>chaque service peut être déployé indépendamment</li>
 								<li>à chaque service son équipe / sa BDD / son langage / sa plateforme...</li>
 							</ul>
-						</medium>
+						</small>
 					</div>
 				</section>
 
@@ -283,8 +276,6 @@
 					<!-- #Docker #Kubernetes-->
 					<h3>La containerisation</h3>
 						<aside class="notes">
-							Les VM émulent l'application, l'OS et les systèmes de fichier.
-							Les containers utilisent l'OS de l'hote (la VM)
 							Les VM ont permis de transformer un serveur physique en logiciel pour pouvoir le manipuler et automatiser +
 							La conteneurisation va + loin et un peu comme un exe, rend l'appli portable et exécutable
 						</aside>
@@ -309,7 +300,7 @@
 					<small>
 						<p>Considérer que l'architecture fait partie du source control, la manipuler comme une partie du code du projet <red>#IAC</red>.</p>
 					</small>
-					<p><img src="img/IAC.jpg" alt="devops" width="600" /></p>
+					<p><img src="img/IAC.jpg" alt="devops" width="500" /></p>
 					<small>
 						<h4>Avantages</h4>
 						<ul>
@@ -345,7 +336,7 @@
 					<h3>Everything As Code</h3>
 					<small>
 						<p>Le code de l'infra et des pipelines fait partie du code du projet. La documentation aussi, les tests aussi, la sécurité ainsi que tout ce qui peut être codé.</p>
-						<p>Le support de cette présentation est du code, il fait partie du code d'un projet et pèse 15 Mo.</p>
+						<p>Le support de cette présentation est du code, il fait partie du code d'un projet.</p>
 					</small>
 					<p><img src="img/eac.jpg" alt="devops" width="300" /></p>
 					<small>
@@ -442,7 +433,7 @@
 						<h3><red>Spoiler alert</red></h3>
 						<div class=fragment>
 							<p>Non.</p>
-							<img src="img/trends.jpg" alt="atdd" width="700" />
+							<img src="img/trends.jpg" alt="atdd" width="500" />
 							<p>#softops? #noops?</p>
 						</div>
 						<!-- <p>
@@ -460,12 +451,10 @@
 								<li>dans 40% des cas besoin de compétences d'administration système</li>
 								<li>dans 10% des cas besoin de compétences en coaching agile</li>
 							</ul>
-						</small>
 
-						<p><big><red>Les outils changent et ne sont pas importants, les gens c'est le contraire.</red></big></p>
+						<p><red>Les outils changent et ne sont pas importants, les gens c'est le contraire.</red></p>
 						<p><img src="img/injury.jpg" alt="injury" width="200" /></p>
 						<p>L'important :</p>
-						<small>
 							<ul>
 								<li>Savoir exprimer ses intentions et contraintes</li>
 								<li>Accepter celles des autres</li>
